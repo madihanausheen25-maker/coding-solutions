@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+int main() 
+{
+    int a, b;
+    // Read the interval limits from standard input
+    scanf("%d\n%d", &a, &b);
+      
+    // String array mapping numbers 1-9 to their lowercase English names
+    char *words[] = {"zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"};
+
+    // Iterate through each integer in the inclusive interval [a, b]
+    for (int n = a; n <= b; n++) {
+        if (n >= 1 && n <= 9) {
+            printf("%s\n", words[n]);
+        } 
+        else if (n > 9 && n % 2 == 0) {
+            printf("even\n");
+        } 
+        else if (n > 9 && n % 2 != 0) {
+            printf("odd\n");
+        }
+    }
+
+    return 0;
+}
