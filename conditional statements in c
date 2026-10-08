@@ -1,0 +1,32 @@
+#include <assert.h>
+#include <limits.h>
+#include <math.h>
+#include <stdbool.h>
+#include <stddef.h>
+#include <stdint.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+char* readline();
+
+
+#include <stdio.h>
+
+int main() 
+{
+    int n;
+    // Read the single input integer
+    if (scanf("%d", &n) != 1) return 0;
+    
+    // Array to map numbers 1-9 to their lowercase English names
+    char *words[] = {"zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"};
+ // Conditional evaluation based on the problem statement
+    if (n >= 1 && n <= 9) {
+        printf("%s\n", words[n]);
+    } else if (n > 9) {
+        printf("Greater than 9\n");
+    }
+
+    return 0;
+}
